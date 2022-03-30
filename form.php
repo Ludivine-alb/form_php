@@ -9,23 +9,28 @@
 </head>
 <body>
     <p>This is my form.</p>
-    <form action="thanks.php" method="POST">
+    <?=  !empty($error) ? $error : ' ';?>
+    <form action="thanks.php" method="POST" target= "">
     <div>
         <label for="name">Nom :</label>
-        <input type="text" id="name" name="userlastname" value="">
+        <input type="text" id="lastname" name="userlastname" value ="" >
+        <p> </p>
     </div>
     <div>
         <label for="name">Prénom :</label>
-        <input type="text" id="name" name="userfirstname" value="">
+        <input type="text" id="firstname" name="userfirstname" value="" >
+        
     </div>
 
     <div>
-        <label for="mail">e-mail&nbsp;:</label>
-        <input type="email" id="mail" name="user_mail">
+        <label for="mail" v>e-mail&nbsp;:</label> 
+        <input type="email" id="mail" name="user_mail" value =""  > 
+        <p></p>
     </div>
     <div>
         <label for="phone">Téléphone:</label>
-        <input type="phone" id="phone" name="user_number">
+        <input type="phone" id="phone" name="user_number" value ="" >
+        <p></p>
     </div>
 
     <div>
@@ -38,15 +43,12 @@
 
     <div>
         <label for="msg">Message :</label>
-        <textarea id="msg" name="user_message">TEXT</textarea>
+        <textarea id="message" name="user_message" value ="" >text</textarea>
     </div>
+
     <div class="button">
         <button type="submit">Envoyer le message</button>
     </div>
-
-    <?php 
-    var_dump($_POST);
-    ?>
 
 </form>
     
